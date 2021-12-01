@@ -16,15 +16,15 @@ class HornedBeast extends Component {
     render() {
         return(
             <Card style={{width: '18rem', textAlign: "center", margin: '1rem .5rem'}}>
-                <h2>{this.props.title}</h2>
+                <h2>{this.props.beastObj.title}</h2>
                 <img 
-                    src={this.props.imageUrl} 
-                    alt={this.props.description} 
-                    title={this.props.title}
+                    src={this.props.beastObj.image_url} 
+                    alt={this.props.beastObj.description} 
+                    title={this.props.beastObj.title}
                     onClick={this.imgClick}
                 ></img>
                 <p style={{fontSize: "24px"}}>🫀's: {this.state.beastFavs}</p>
-                <p>{this.props.description}</p>
+                <p>{this.props.beastObj.description}</p>
             </Card>
         )
     }
