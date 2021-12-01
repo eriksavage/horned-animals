@@ -9,8 +9,14 @@ Erik Savage
 ## Resources
 - React
 - MDN Web Docs
+- Bootstrap
 
 ## Time Estimates:
+Number and name of feature: <ins>Lab02, Feature 3, Branch: bootstrap</ins>
+- Estimate of time needed to complete: <ins>1 hour 10 minutes</ins>
+- Start time: <ins>4:50pm</ins>
+- Finish time: <ins>9:31pm</ins>
+- Actual time needed to complete: <ins>2 hours 10 minutes</ins>
 
 Number and name of feature: <ins>Lab02, Feature 2, Branch: vote</ins>
 - Estimate of time needed to complete: <ins>45 minutes</ins>
