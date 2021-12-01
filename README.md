@@ -9,3 +9,11 @@ Erik Savage
 ## Resources
 - React
 - MDN Web Docs
+
+## Time Estimates:
+- Number and name of feature: <ins>Lab02, Feature 1, Branch: image-gallery</ins>
+- Estimate of time needed to complete: <ins>30 minutes</ins>
+- Start time: <ins>3:24pm</ins>
+- Finish time: <ins>4:14pm</ins>
+- Actual time needed to complete: <ins>50 minutes</ins>
+
