@@ -3,7 +3,7 @@ import { Component } from "react";
 class Header extends Component {
     render(){
         return (
-            <h1>Animal Horns</h1>
+            <h1 style={{textAlign: 'center'}}>Animal Horns</h1>
         )
     }
 }

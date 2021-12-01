@@ -3,7 +3,7 @@ import { Component } from "react";
 class Footer extends Component {
     render(){
         return (
-            <p>Developer: Erik Savage</p>
+            <p style={{textAlign: "center"}}>Developer: Erik Savage</p>
         )
     }
 }
