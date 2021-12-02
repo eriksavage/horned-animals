@@ -9,9 +9,13 @@ export default class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      modalDisplayed: false
+      modalDisplayed: false,
+      clickedBeast: {}
     }
   }
+  updateClickedBeast = (beastObj) => {
+    this.setState({clickedBeast: beastObj});
+  };
   showModal = () =>{
     this.setState({modalDisplayed: true});
   };
@@ -19,13 +23,12 @@ export default class App extends Component {
     this.setState({modalDisplayed: false});
   };
 
-
   render() {
     return (
       <div>
         <Header />
-        <SelectedBeast hideModal={this.hideModal} show={this.state.modalDisplayed}/>
-        <Main beastData={beastData} showModal={this.showModal} show={this.state.modalDisplayed}/>
+        <SelectedBeast hideModal={this.hideModal} show={this.state.modalDisplayed} clickedBeast={this.state.clickedBeast}/>
+        <Main beastData={beastData} showModal={this.showModal} updateClickedBeast={this.updateClickedBeast}/>
         <Footer />
       </div>
     )

@@ -17,7 +17,7 @@ class Main extends Component {
                     beastObj = {beastObject}
                     key = {beastObject.title}
                     showModal={this.props.showModal} 
-                    show={this.props.modalDisplayed}
+                    updateClickedBeast={this.props.updateClickedBeast}
                     />})
                 }
             </Container>
