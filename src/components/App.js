@@ -19,12 +19,15 @@ export default class App extends Component {
   updateClickedBeast = (beastObj) => {
     this.setState({clickedBeast: beastObj});
   };
+
   showModal = () =>{
     this.setState({modalDisplayed: true});
   };
+
   hideModal = () =>{
     this.setState({modalDisplayed: false});
   };
+  
   textChange = (e) => {
     this.setState({search: e.target.value})
     this.filterSearch();

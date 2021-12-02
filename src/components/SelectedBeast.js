@@ -12,11 +12,11 @@ class SelectedBeast extends Component{
     render(){
         return(
             <Modal
-            show={this.props.show}
-            onHide={this.closeModal}
-            size="lg"
-            aria-labelledby="contained-modal-title-vcenter"
-            centered
+              show={this.props.show}
+              onHide={this.closeModal}
+              size="lg"
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
           >
             <Modal.Header closeButton>
               <Modal.Title id="contained-modal-title-vcenter">
