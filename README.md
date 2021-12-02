@@ -10,8 +10,15 @@ Erik Savage
 - React
 - MDN Web Docs
 - Bootstrap
+- [Fuzzy Search Functionality](https://youtu.be/RM_nXOyHwN0)
 
 ## Time Estimates:
+Number and name of feature: <ins>Lab03, Feature 1, Branch: modal-card</ins>
+- Estimate of time needed to complete: <ins>2 hours 30 minutes</ins>
+- Start time: <ins>2:30pm</ins>
+- Finish time: <ins>6:00pm</ins>
+- Actual time needed to complete: <ins>3 hours 30 minutes</ins>
+  
 Number and name of feature: <ins>Lab02, Feature 3, Branch: bootstrap</ins>
 - Estimate of time needed to complete: <ins>1 hour 10 minutes</ins>
 - Start time: <ins>4:50pm</ins>
