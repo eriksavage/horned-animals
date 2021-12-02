@@ -15,6 +15,7 @@ class Main extends Component {
                 {this.props.beastData.map(beastObject => {
                     return <HornedBeast 
                     beastObj = {beastObject}
+                    key = {beastObject.title}
                     showModal={this.props.showModal} 
                     show={this.props.modalDisplayed}
                     />})
