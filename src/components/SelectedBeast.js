@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
 
 
 class SelectedBeast extends Component{
@@ -19,19 +20,25 @@ class SelectedBeast extends Component{
           >
             <Modal.Header closeButton>
               <Modal.Title id="contained-modal-title-vcenter">
-                Modal heading
+                {this.props.clickedBeast.title}
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <h4>Centered Modal</h4>
+              <img 
+                src={this.props.clickedBeast.image_url} 
+                alt={this.props.clickedBeast.description} 
+                title={this.props.clickedBeast.title}
+                className="img-fluid"
+              ></img>
               <p>
-                Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-                dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-                consectetur ac, vestibulum at eros.
+                {this.props.clickedBeast.description}
               </p>
             </Modal.Body>
             <Modal.Footer>
-              <Button onClick={this.closeModal}>Close</Button>
+                <Row md={2}>
+                    <p>test</p>
+                    <Button onClick={this.closeModal}>Close</Button>
+                </Row>    
             </Modal.Footer>
           </Modal>
         );
