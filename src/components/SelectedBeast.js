@@ -1,14 +1,18 @@
 import { Component } from "react";
 import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 
 class SelectedBeast extends Component{
+    closeModal = () => {
+        this.props.hideModal();
+    }
+
     render(){
         return(
             <Modal
-            //{...props}
-            // show={show}
-            // onHide={handleClose}
+            show={this.props.show}
+            onHide={this.closeModal}
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
@@ -27,7 +31,7 @@ class SelectedBeast extends Component{
               </p>
             </Modal.Body>
             <Modal.Footer>
-              {/* <Button onClick={props.onHide}>Close</Button> */}
+              <Button onClick={this.closeModal}>Close</Button>
             </Modal.Footer>
           </Modal>
         );

@@ -11,6 +11,7 @@ class HornedBeast extends Component {
 
     imgClick = () => {
         this.setState({beastFavs: this.state.beastFavs + 1});
+        this.props.showModal();
     }
 
     render() {

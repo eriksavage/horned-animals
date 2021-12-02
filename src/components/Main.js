@@ -13,7 +13,10 @@ class Main extends Component {
                 }}>
 
                 {this.props.beastData.map(beastObject => {
-                    return <HornedBeast beastObj = {beastObject}
+                    return <HornedBeast 
+                    beastObj = {beastObject}
+                    showModal={this.props.showModal} 
+                    show={this.props.modalDisplayed}
                     />})
                 }
             </Container>
