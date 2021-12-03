@@ -11,7 +11,7 @@ class SelectedBeast extends Component{
 
     render(){
         return(
-            <Modal
+          <Modal
               show={this.props.show}
               onHide={this.closeModal}
               size="lg"

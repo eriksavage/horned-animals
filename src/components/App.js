@@ -62,7 +62,7 @@ export default class App extends Component {
     if(this.state.search === ""){
       return hornArray;
     } else {
-      beastArray =  hornArray.filter(arrObj => arrObj.title.includes(this.state.search));
+      beastArray =  hornArray.filter(arrObj => arrObj.title.toLowerCase().includes(this.state.search.toLowerCase()));
       return beastArray; 
     };
   }
