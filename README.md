@@ -13,6 +13,12 @@ Erik Savage
 - [Fuzzy Search Functionality](https://youtu.be/RM_nXOyHwN0)
 
 ## Time Estimates:
+Number and name of feature: <ins>Lab04, Feature 1, Branch: selection-form</ins>
+- Estimate of time needed to complete: <ins>2 hours 30 minutes</ins>
+- Start time: <ins>3:30pm</ins>
+- Finish time: <ins>9:54pm</ins>
+- Actual time needed to complete: <ins>3 hours 30 minutes</ins>
+
 Number and name of feature: <ins>Lab03, Feature 1, Branch: modal-card</ins>
 - Estimate of time needed to complete: <ins>2 hours 30 minutes</ins>
 - Start time: <ins>2:30pm</ins>

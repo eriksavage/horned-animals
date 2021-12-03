@@ -36,7 +36,7 @@ class HornedBeast extends Component {
                             <Card.Title>❤️'s: {this.state.beastFavs}</Card.Title>
                         </Col>    
                     </Row>
-                    <Card.Text>{this.props.beastObj.description}</Card.Text>
+                    <Card.Text style={{textAlign: "center"}}>{this.props.beastObj.description}</Card.Text>
                 </Card.Body>
             </Card>
         )
