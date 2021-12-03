@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 class HornFilter extends Component{
     selectHandler = (event) => {
@@ -11,7 +12,8 @@ class HornFilter extends Component{
     render(){
         return(
             <>
-                <label>Horn Filter </label>
+            <InputGroup className="mb-3">
+                <InputGroup.Text id="basic-addon1">Horn Filter</InputGroup.Text>
                 <Form.Select onChange={this.selectHandler}>
                     <option value="any">Any Number</option>
                     <option value="1">1 Horn</option>
@@ -19,6 +21,7 @@ class HornFilter extends Component{
                     <option value="3">3 Horns</option>
                     <option value="4+">4+ Horns</option>
                 </Form.Select>
+            </InputGroup>
             </>    
         )
     }
