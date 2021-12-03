@@ -30,13 +30,12 @@ class SelectedBeast extends Component{
                 title={this.props.clickedBeast.title}
                 className="img-fluid"
               ></img>
-              <p>
+              <p style={{textAlign: "center"}}>
                 {this.props.clickedBeast.description}
               </p>
             </Modal.Body>
             <Modal.Footer>
-                <Row md={2}>
-                    <p>test</p>
+                <Row md={1}>
                     <Button onClick={this.closeModal}>Close</Button>
                 </Row>    
             </Modal.Footer>
