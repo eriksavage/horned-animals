@@ -11,7 +11,7 @@ export default class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      beastData: {beastData},
+      // beastData: [],
       modalDisplayed: false,
       clickedBeast: {},
       search: ""
@@ -37,12 +37,12 @@ export default class App extends Component {
 
   filterSearch = () => {
     let beastArray = [];
-    if (this.state.search === ""){
-      return this.state.beastData;
+    if(this.state.search === ""){
+      beastArray =  beastData;
+      return beastArray;
     } else {
-      this.setState({beastData: this.state.beastData.filter(arrObj => arrObj.title.includes(this.state.search))});
-      console.log(beastArray)
-      return this.state.beastData;
+      beastArray =  beastData.filter(arrObj => arrObj.title.includes(this.state.search));
+      return beastArray;
     }
   };
 
