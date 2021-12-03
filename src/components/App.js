@@ -4,8 +4,8 @@ import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 import SelectedBeast from './SelectedBeast.js';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FormControl from 'react-bootstrap/FormControl';
+import SearchBar from './SearchBar.js';
+
 
 export default class App extends Component {
   constructor(props){
@@ -28,14 +28,13 @@ export default class App extends Component {
   hideModal = () =>{
     this.setState({modalDisplayed: false});
   };
-  
+
   textChange = (e) => {
     this.setState({search: e.target.value})
-    this.filterSearch();
-    console.log(this.state.search);
+    this.beastFilter();
   };
-
-  filterSearch = () => {
+  
+  beastFilter = () => {
     let beastArray = [];
     if(this.state.search === ""){
       beastArray =  beastData;
@@ -50,17 +49,9 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-        <InputGroup className="mb-3">
-          <InputGroup.Text id="basic-addon1">🔍</InputGroup.Text>
-          <FormControl
-            placeholder="Filter by HornedBeast's name..."
-            aria-label="Filter by HornedBeast's name..."
-            aria-describedby="basic-addon1"
-            onChange={this.textChange}
-          />
-        </InputGroup>
+        <SearchBar textChange={this.textChange}/>
         <SelectedBeast hideModal={this.hideModal} show={this.state.modalDisplayed} clickedBeast={this.state.clickedBeast}/>
-        <Main beastData={this.filterSearch()} showModal={this.showModal} updateClickedBeast={this.updateClickedBeast}/>
+        <Main beastData={this.beastFilter()} showModal={this.showModal} updateClickedBeast={this.updateClickedBeast}/>
         <Footer />
       </div>
     )
