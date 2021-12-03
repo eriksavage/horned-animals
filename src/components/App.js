@@ -5,13 +5,14 @@ import Main from './Main.js';
 import Footer from './Footer.js';
 import SelectedBeast from './SelectedBeast.js';
 import SearchBar from './SearchBar.js';
+import HornFilter from './HornFilter.js';
 
 
 export default class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      // beastData: [],
+      hornFilter: "any",
       modalDisplayed: false,
       clickedBeast: {},
       search: ""
@@ -33,23 +34,49 @@ export default class App extends Component {
     this.setState({search: e.target.value})
     this.beastFilter();
   };
+
+  updateHorns = (selection) => {
+    this.setState({hornFilter: selection});
+    console.log('horn state', this.state.hornFilter);
+  }
   
   beastFilter = () => {
     let beastArray = [];
-    if(this.state.search === ""){
-      beastArray =  beastData;
-      return beastArray;
-    } else {
-      beastArray =  beastData.filter(arrObj => arrObj.title.includes(this.state.search));
-      return beastArray;
+    let hornArray = [];
+    
+    switch (this.state.hornFilter) {
+      case "any":
+        hornArray = beastData;
+        break;
+      case "1":
+        hornArray = beastData.filter(arrObj => (arrObj.horns === 1));
+        break;
+      case "2":
+        hornArray = beastData.filter(arrObj => (arrObj.horns === 2));
+        break;
+      case "3":
+        hornArray = beastData.filter(arrObj => (arrObj.horns === 3));
+        break;  
+      default:
+        hornArray = beastData.filter(arrObj => (arrObj.horns > 3));
+        break;
     }
-  };
+    
+    if(this.state.search === ""){
+      return hornArray;
+    } else {
+      beastArray =  hornArray.filter(arrObj => arrObj.title.includes(this.state.search));
+      return beastArray; 
+    };
+  }
+
 
   render() {
     return (
       <div>
         <Header />
         <SearchBar textChange={this.textChange}/>
+        <HornFilter updateHorns={this.updateHorns}/>
         <SelectedBeast hideModal={this.hideModal} show={this.state.modalDisplayed} clickedBeast={this.state.clickedBeast}/>
         <Main beastData={this.beastFilter()} showModal={this.showModal} updateClickedBeast={this.updateClickedBeast}/>
         <Footer />
