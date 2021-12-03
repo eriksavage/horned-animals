@@ -4,9 +4,6 @@ import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 import SelectedBeast from './SelectedBeast.js';
-import SearchBar from './SearchBar.js';
-import HornFilter from './HornFilter.js';
-
 
 export default class App extends Component {
   constructor(props){
@@ -74,9 +71,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <SearchBar textChange={this.textChange}/>
-        <HornFilter updateHorns={this.updateHorns}/>
+        <Header textChange={this.textChange} updateHorns={this.updateHorns}/>
         <SelectedBeast hideModal={this.hideModal} show={this.state.modalDisplayed} clickedBeast={this.state.clickedBeast}/>
         <Main beastData={this.beastFilter()} showModal={this.showModal} updateClickedBeast={this.updateClickedBeast}/>
         <Footer />
